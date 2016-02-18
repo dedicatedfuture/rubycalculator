@@ -28,6 +28,12 @@ calc.divide
 
 class Elevator
   attr_accessor :floor
+  def moveup(x)
+    @floor = @floor + x
+  end
+  def movedown(y)
+    @floor = @floor - y
+  end
   def greet
     puts "Welcome to floor: #{floor}"
   end
@@ -40,3 +46,7 @@ elevate = Elevator.new
 elevate.floor = 10
 elevate.greet
 elevate.music
+elevate.moveup(5)
+elevate.greet
+elevate.movedown(3)
+elevate.greet
